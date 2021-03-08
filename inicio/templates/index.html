@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+  {% block pagecontent %}
+  <nav class="menu">
+    <div class="" style="display: flex">
+      <img class="logo_img" src="{% static 'img/logo.png' %}" alt="">
+      <label class="logo">TutoriaWEB</label>
+    </div>
+
+      <ul class="menu_items">
+          <li class="active"><a href="#">Inicio</a></li>
+          <li><a href="#">Institucional</a></li>
+          <li><a href="#">Academico</a></li>
+          <li><a href="/vercontacto">Contactos</a></li>
+          <li><i class="fas fa-user"></i></li>
+      </ul>
+      <span class="btn_menu">
+          <i class="fa fa-bars"></i>
+      </span>
+  </nav>
+  <img class="fondo "src="{% static 'img/frente.jpg' %}" alt="">
+  {% endblock %}

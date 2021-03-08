@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} About Us {% endblock %}</title>
+</head>
+<body>
+  {% block pagecontent %}
+    <a href="{% url 'home' %}">Go Home</a>
+    <a href="{% url 'about' %}">About</a>
+  {% endblock %}
+</body>
+</html>
