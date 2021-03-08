@@ -1,1 +1,1 @@
-web: gunicorn tutoriaweb.wsgi --log-file -
+web: python tutoriaweb/manage.py runserver "0.0.0.0:$PORT"
