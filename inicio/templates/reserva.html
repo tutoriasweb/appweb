@@ -1,50 +1,45 @@
 {% extends 'base.html' %}
 
+
+
+
 <body>
   {% block pagecontent %}
     <div class="card" >
-        <div class="card-section">
+        <div class="card-section" ">
             <form class="card-section-selection">
                 <h4>RESERVAR CLASE</h4>
-                <select class="card-section-selection-atributes">
-
+                <select class="btn-danger opciones">
                       {% for item in Materias %}
                           <option value="{{item.id_materia}}">{{item.nombre}}</option>
                       {% endfor %}
                 </select>
 
-                <div class="card-section-selection-profesor">
-                    <p>Profesor</p>
-                    <select class="card-section-selection-profesor-eleccion">
-                      {% for item in Profesores %}
-                          <option value="{{item.id_profesor}}">{{item.nombre}}</option>
-                      {% endfor %}
-                    </select>
-                </div>
 
-                <div class="card-section-selection-horarios">
+                    <div class="btn btn-success" style="width: 100%; margin-top: 5px">
+                      <div style='color: black; font-size: 15px'><strong>Profesor</strong></div>
+                      <select  style="width: 100%"  class="btn-success">
+                        {% for item in Profesores %}
+                            <option value="{{item.id_profesor}}">{{item.nombre}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
 
-                        <div class="card-section-selection-horarios-fecha">
-                            <p><i class="zmdi zmdi-calendar-check"></i></p>
-                            <p class="letra-fecha">Hora</p>
-                            <input type="time">
+                    <div class="btn btn-success" style="width: 100%; margin-top: 5px">
+                      <div style='color: black; font-size: 15px'><strong>Hora</strong></div>
+                      <input type="time" name='hora' class="btn-success" style='text-align: center'>
+                    </div>
 
-                        </div>
-                        <div class="card-section-selection-horarios-hora">
-
-                            <p class="letra-diurno">Fecha</p>
-                            <input type="date" >
-                        </div>
-                        <div class="card-section-selection-horarios-modalidad">
-                            <p><i class = "zmdi zmdi-pin"> </i></p>
-                            <p class="letra-modalidad">Distancia</p>
-
-                        </div>
-
-                </div>
+                    <div class="btn btn-success" style="width: 100%; margin-top: 5px">
+                      <div style='color: black; font-size: 15px'><strong>Fecha</strong></div>
+                      <input type="date" name='fecha' class="btn-success" style='text-align: center'>
+                    </div>
 
 
-                <input class="reservarcalse-boton" type="submit" name="reservarcalse-boton" value="RESERVAR TURNO">
+
+
+
+                <input class="btn btn-primary" type="submit" name="reservar" value="RESERVAR" style="margin-top: 5px">
 
 
             </form>
